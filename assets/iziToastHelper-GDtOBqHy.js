@@ -1,0 +1,2 @@
+import{i as e}from"./vendor-BbbuE1sJ.js";function r(o){e.error({...i,title:"Error",message:o,color:"#ef4040",icon:"icon-error"})}function s(o){e.error({...i,title:"OK",message:o,color:"#59A10D",icon:"icon-ok"})}const i={position:"topRight",titleColor:"#fff",titleSize:"16px",titleWeight:"700",titleLineHeight:"1.5",messageColor:"#fff",messageSize:"16px",messageWeight:"400",messageLineHeight:"1.5",iconColor:"#fff",theme:"dark"};export{s as a,r as s};
+//# sourceMappingURL=iziToastHelper-GDtOBqHy.js.map
