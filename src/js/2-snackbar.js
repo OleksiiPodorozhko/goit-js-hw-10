@@ -20,12 +20,12 @@ refs.form.addEventListener('submit', e => {
   new Promise((resolve, reject) => {
     setTimeout(() => {
       if (state === 'fulfilled') {
-        resolve(delay);
+        resolve();
       } else {
-        reject(delay);
+        reject();
       }
     }, delay);
   })
-    .then(delay => showOk(`Fulfilled promise in ${delay}ms`))
-    .catch(delay => showError(`Rejected promise in ${delay}ms`));
+    .then(() => showOk(`Fulfilled promise in ${delay}ms`))
+    .catch(() => showError(`Rejected promise in ${delay}ms`));
 });

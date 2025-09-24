@@ -13,7 +13,7 @@ export function showError(message) {
 }
 
 export function showOk(message) {
-  iziToast.error({
+  iziToast.success({
     ...commonStyles,
     title: 'OK',
     message: message,
