@@ -2,6 +2,7 @@ import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import '../fonts/style.css';
 
 const refs = {
   startBtn: document.querySelector('[data-start]'),
@@ -84,7 +85,8 @@ function showDateError() {
     messageWeight: '400',
     messageLineHeight: '1.5',
     iconColor: '#fff',
-    icon: '',
+    icon: 'icon-error',
+    theme: 'dark',
   });
 }
 
