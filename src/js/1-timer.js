@@ -1,8 +1,6 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
-import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
-import '../fonts/style.css';
+import { showError } from './iziToastHelper.js';
 
 const refs = {
   startBtn: document.querySelector('[data-start]'),
@@ -32,7 +30,7 @@ const options = {
 
     if (userSelectedDate < Date.now()) {
       refs.startBtn.disabled = true;
-      showDateError();
+      showError('Please choose a date in the future',);
     } else {
       refs.startBtn.disabled = false;
     }
@@ -69,26 +67,26 @@ function showDate({ days, hours, minutes, seconds }) {
   refs.secondsLabel.textContent = addLeadingZero(seconds);
 }
 
-function showDateError() {
-  iziToast.error({
-    title: 'Error',
-    message: 'Please choose a date in the future',
-    class: 'error-toast',
-    position: 'topRight',
-    color: '#ef4040',
-    titleColor: '#fff',
-    titleSize: '16px',
-    titleWeight: '700',
-    titleLineHeight: '1.5',
-    messageColor: '#fff',
-    messageSize: '16px',
-    messageWeight: '400',
-    messageLineHeight: '1.5',
-    iconColor: '#fff',
-    icon: 'icon-error',
-    theme: 'dark',
-  });
-}
+// function showDateError() {
+//   iziToast.error({
+//     title: 'Error',
+//     message: 'Please choose a date in the future',
+//     class: 'error-toast',
+//     position: 'topRight',
+//     color: '#ef4040',
+//     titleColor: '#fff',
+//     titleSize: '16px',
+//     titleWeight: '700',
+//     titleLineHeight: '1.5',
+//     messageColor: '#fff',
+//     messageSize: '16px',
+//     messageWeight: '400',
+//     messageLineHeight: '1.5',
+//     iconColor: '#fff',
+//     icon: 'icon-error',
+//     theme: 'dark',
+//   });
+// }
 
 function addLeadingZero(value) {
   return value.toString().padStart(2, '0');
