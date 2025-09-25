@@ -55,4 +55,41 @@ main {
 
 .state-group label {
   display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.state-group label::before {
+  content: '';
+  position: absolute;
+  left: -34px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 1px solid #757575;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.state-group label:has(input:checked)::before {
+  border-color: #4e75ff;
+}
+
+.state-group label::after {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #4e75ff;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.state-group label:has(input:checked)::after {
+  opacity: 1;
 }
