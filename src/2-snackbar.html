@@ -1,53 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Snackbar</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="./css/styles.css" />
-  <script type="module" src="./js/2-snackbar.js" defer></script>
-</head>
-<body>
-<load
-  src="./partials/header.html"
-  icon-path="./img/sprite.svg#logo"
-  highlight-curr="active"
-/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snackbar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script type="module" src="./js/2-snackbar.js" defer></script>
+  </head>
+  <body>
+    <load
+      src="./partials/header.html"
+      icon-path="./img/sprite.svg#logo"
+      highlight-curr="active"
+    />
 
-<main>
-  <div class="container">
-    <form class="form">
-      <label class="delay-label">
-        Delay (ms)
-        <input type="number" name="delay" required />
-      </label>
+    <main>
+      <div class="container">
+        <form class="form">
+          <label class="delay-label">
+            Delay (ms)
+            <input type="number" name="delay" required />
+          </label>
 
-      <fieldset class="state-group">
-        <legend>State</legend>
-        <label>
-          <input class="visually-hidden" type="radio" name="state" value="fulfilled" required />
-          Fulfilled
-        </label>
-        <label>
-          <input class="visually-hidden" type="radio" name="state" value="rejected" required />
-          Rejected
-        </label>
-      </fieldset>
+          <fieldset class="state-group">
+            <legend>State</legend>
+            <label>
+              <input
+                class="visually-hidden"
+                type="radio"
+                name="state"
+                value="fulfilled"
+                required
+              />
+              Fulfilled
+            </label>
+            <label>
+              <input
+                class="visually-hidden"
+                type="radio"
+                name="state"
+                value="rejected"
+                required
+              />
+              Rejected
+            </label>
+          </fieldset>
 
-      <button type="submit">Create notification</button>
-    </form>
+          <button type="submit">Create notification</button>
+        </form>
 
-    <load src="./partials/back-link.html" />
-  </div>
-</main>
+        <load src="./partials/back-link.html" />
+      </div>
+    </main>
 
-<load src="./partials/footer.html" />
-</body>
+    <load src="./partials/footer.html" />
+  </body>
 </html>
