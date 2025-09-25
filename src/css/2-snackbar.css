@@ -16,8 +16,7 @@ main {
   overflow: hidden;
 }
 
-
-.form{
+.form {
   width: 360px;
   font-size: 16px;
   line-height: 1.5;
@@ -35,6 +34,18 @@ main {
   margin-top: 8px;
   border: 1px solid #808080;
   border-radius: 4px;
+  outline: none;
+  padding-left: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.delay-label input:focus:placeholder-shown,
+.delay-label input:hover {
+  border-color: #000;
+}
+
+.delay-label input:focus:not(:placeholder-shown) {
+  border-color: #4e75ff;
 }
 
 .state-group {
@@ -45,6 +56,11 @@ main {
   height: auto;
   display: flex;
   gap: 88px;
+}
+
+.state-group:hover,
+.state-group:focus {
+  border-color: #000;
 }
 
 .state-group legend {
@@ -70,10 +86,15 @@ main {
   border: 1px solid #757575;
   border-radius: 50%;
   background-color: white;
+  transition: border-color 0.2s ease;
 }
 
 .state-group label:has(input:checked)::before {
   border-color: #4e75ff;
+}
+
+.state-group label:not(:has(input:checked)):hover::before {
+  border-color: #000;
 }
 
 .state-group label::after {
@@ -92,4 +113,23 @@ main {
 
 .state-group label:has(input:checked)::after {
   opacity: 1;
+}
+
+.form button[type='submit'] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  color: #fff;
+  background-color: #4e75ff;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.form button[type='submit']:hover,
+.form button[type='submit']:focus {
+  background-color: #6c8cff;
 }
