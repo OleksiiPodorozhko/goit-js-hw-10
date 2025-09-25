@@ -1,26 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Snackbar</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-  <script type="module" crossorigin src="/goit-js-hw-10/2-snackbar.js"></script>
-  <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/styles-XVj2V2O1.js">
-  <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-BbbuE1sJ.js">
-  <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/iziToastHelper-DQVFPbDP.js">
-  <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/styles-IECFTa_8.css">
-  <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/iziToastHelper-_5_hdXr_.css">
-  <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/vendor-CZjNVMTf.css">
-</head>
-<body>
-<header class="header">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snackbar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/goit-js-hw-10/2-snackbar.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/styles-XVj2V2O1.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-BbbuE1sJ.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/iziToastHelper-DQVFPbDP.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/styles-IECFTa_8.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/iziToastHelper-_5_hdXr_.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/vendor-CZjNVMTf.css">
+  </head>
+  <body>
+    <header class="header">
   <div class="container">
     <nav class="nav">
       <a class="nav-logo" href="./index.html" aria-label="Site logo">
@@ -41,35 +41,47 @@
 </header>
 
 
-<main>
-  <div class="container">
-    <form class="form">
-      <label class="delay-label">
-        Delay (ms)
-        <input type="number" name="delay" required />
-      </label>
+    <main>
+      <div class="container">
+        <form class="form">
+          <label class="delay-label">
+            Delay (ms)
+            <input type="number" name="delay" required />
+          </label>
 
-      <fieldset class="state-group">
-        <legend>State</legend>
-        <label>
-          <input class="visually-hidden" type="radio" name="state" value="fulfilled" required />
-          Fulfilled
-        </label>
-        <label>
-          <input class="visually-hidden" type="radio" name="state" value="rejected" required />
-          Rejected
-        </label>
-      </fieldset>
+          <fieldset class="state-group">
+            <legend>State</legend>
+            <label>
+              <input
+                class="visually-hidden"
+                type="radio"
+                name="state"
+                value="fulfilled"
+                required
+              />
+              Fulfilled
+            </label>
+            <label>
+              <input
+                class="visually-hidden"
+                type="radio"
+                name="state"
+                value="rejected"
+                required
+              />
+              Rejected
+            </label>
+          </fieldset>
 
-      <button type="submit">Create notification</button>
-    </form>
+          <button type="submit">Create notification</button>
+        </form>
 
-    <a class="back-link" href="./index.html">Go back</a>
+        <a class="back-link" href="./index.html">Go back</a>
 
-  </div>
-</main>
+      </div>
+    </main>
 
-<footer class="footer">
+    <footer class="footer">
   <div class="container">
     <p class="footer-desc">
       Made by
@@ -85,5 +97,5 @@
   </div>
 </footer>
 
-</body>
+  </body>
 </html>
